@@ -22,11 +22,8 @@ startBtn.addEventListener('click', () => {
 // ITERATION 2: Start Countdown
 function startCountdown() {
   console.log("startCountdown called!");
-
-  if (remainingTime !== DURATION) {
-    remainingTime = DURATION;
-  }
-
+  
+  remainingTime = DURATION;
   timer = setInterval(test, 1000)
   
   function test() {
@@ -60,8 +57,8 @@ function showToast(message) {
 
   if (message) {
     toastMsg.innerHTML = message
-  }
-
+  } 
+  
   toastCard.classList.add('show');
 
   setTimeout(() => {
