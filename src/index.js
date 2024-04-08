@@ -41,7 +41,7 @@ function startCountdown() {
         showToast('Start the engines! 💥')
       } 
 
-      if (remainingTime <= 0) {
+      if (remainingTime === 0) {
         showToast('Lift off! 🚀')
       }
     }
@@ -64,10 +64,11 @@ function showToast(message) {
   setTimeout(() => {
     toastCard.classList.remove('show');
   }, 3000)
-
-  closeToast.addEventListener('click', () => {
-    toastCard.classList.remove('show');
-    clearInterval(timer);
-    startCountdown();
-  })
 }
+
+closeToast.addEventListener('click', () => {
+  toastCard.classList.remove('show');
+  clearInterval(timer);
+  startCountdown();
+  console.log('?')
+})
